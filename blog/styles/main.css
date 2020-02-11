@@ -87,6 +87,9 @@ hr{
     padding-top:30px;
     padding-bottom:30px;
 }
+.navbar-brand{
+    padding:25px !important;
+}
 /* navbar ends */
 /* about me begins */
 .aboutMe{
