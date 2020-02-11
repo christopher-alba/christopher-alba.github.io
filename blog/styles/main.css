@@ -112,6 +112,11 @@ hr{
     color:#c7550e;
     text-align:center;
 }
+@media(max-width:600px){
+    .blogLink{
+        width:90%;
+    }
+}
 .blogLink:hover{
     background: #8c8c8c;
     transition:500ms;
