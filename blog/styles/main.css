@@ -196,6 +196,16 @@ hr{
     position:sticky;
     top:0px;
 }
+
+.blogContent{
+    padding-bottom:10%;
+}
+.blogContent h3{
+    color:#cc612f;
+    font-weight:200;
+    margin-top:5%;
+}
+/* Sprint 2 technical styles begins */
 .inline1{
     display:inline;
     width:1000px;
@@ -220,11 +230,9 @@ hr{
     margin:20px;
     background:rgba(128, 128, 128, 0.493);
 }
-.blogContent{
-    padding-bottom:10%;
+
+.sprint2-technical-code{
+    color:rgb(255, 143, 161);
+    background:rgb(240, 240, 240);
 }
-.blogContent h3{
-    color:#cc612f;
-    font-weight:200;
-    margin-top:5%;
-}
+/* SPrint 2 technical styles ends */
