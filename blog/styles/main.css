@@ -8,8 +8,8 @@ h1{
     text-align:center;
     color:#d68945;
     font-weight:200 !important;
-    padding:10%;
-    padding-top:20%;
+    padding:8%;
+    padding-top:15%;
 }
 h2{
     color:#cc612f;
@@ -70,6 +70,7 @@ hr{
 /* navbar starts */
 .navbar-dark .navbar-nav .nav-link{
     color:white !important;
+    transition:500ms;
 }
 .navbar{
     padding:0px !important;
@@ -79,6 +80,7 @@ hr{
 }
 .navbar-dark .navbar-nav .nav-link:hover{
     background:	#A9775E;
+    transition:500ms;
 
 }
 .navbar-expand-lg .navbar-nav .nav-link{
@@ -99,11 +101,24 @@ hr{
 /* blog begins */
 .blogs{
     min-height:101vh;
-    background:#dbdbdb;
+    background:#f0f0f0;
 }
 .blogLink{
     background:white;
+    transition:500ms;
     padding:50px;
+    width:50%;
+    margin:0 auto 0 auto;
+    color:#c7550e;
+    text-align:center;
+}
+.blogLink:hover{
+    background: #8c8c8c;
+    transition:500ms;
+    color:#fcb851 !important;
+}
+.blogs a:hover{
+    text-decoration:none !important;
 }
 .blogs a{
     margin:30px;
@@ -134,9 +149,18 @@ hr{
 .blogHeader{
     padding-top:100px;
     padding-bottom:100px;
-    background:#1b1f82;
     height:100vh;
     text-align:center;
+    color:white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.39);
+}
+.technical{
+    background:url("https://wallpaperplay.com/walls/full/6/e/3/197055.jpg");
+    background-size:cover;
+}
+.cultural{
+    background:url("https://cdn.theculturetrip.com/wp-content/uploads/2017/08/geradlinesy_filipinoculture_web.png");
+    background-size:cover;
 }
 .blogHeader h1{
     color:white;
@@ -171,4 +195,36 @@ hr{
     border-radius:0 !important;
     position:sticky;
     top:0px;
+}
+.inline1{
+    display:inline;
+    width:1000px;
+    height:1000px;
+    padding:50px;
+    margin:20px;
+    background:rgba(128, 128, 128, 0.493);
+}
+.inline2{
+    display:block;
+    width:150px;
+    height:150px;
+    padding:50px;
+    margin:20px;
+    background:rgba(128, 128, 128, 0.493);
+}
+.inline3{
+    display:inline-block;
+    width:150px;
+    height:150px;
+    padding:50px;
+    margin:20px;
+    background:rgba(128, 128, 128, 0.493);
+}
+.blogContent{
+    padding-bottom:10%;
+}
+.blogContent h3{
+    color:#cc612f;
+    font-weight:200;
+    margin-top:5%;
 }
