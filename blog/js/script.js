@@ -26,6 +26,16 @@ $(".3").click(function(){
     }, 2000);
 })
 
+// animate scroll down button in landing area
+$(".titleButton").hover(function(){
+
+    $(".titleButton img").animate({bottom:"-=15px"},500,"linear");
+    $(".titleButton img").animate({bottom:"+=15px"},500,"linear");
+   
+    
+},function(){
+
+});
 // Detect which section is displayed in the screen
 var $window = $(window);
 var $animation_elements = $('.animation-element');
@@ -83,3 +93,4 @@ function check_if_in_view() {
 
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
+
