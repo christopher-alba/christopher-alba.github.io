@@ -1,9 +1,95 @@
-<html>
-  <head>
-    <title>My blog</title>
-  <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1> 
-    <p> This is the beginning of my website home page.</p>
-    <p> It will eventually contain a list of links to all my blogs. </p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="blog/styles/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <!-- The landing area of website -->
+  <header class="homepage">
+    <div class="title">
+      <h1>Christopher Sy Alba</h1>
+      <hr>
+      <h4>my homepage</h4>
+    </div>
+    <div class="titleButton">
+      <img src="blog/styles/images/expand-button.png" alt="a button to scroll down">
+    </div>
+  </header>
+
+  <!-- The navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Christopher Sy Alba</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link 1" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link 2" href="#">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link 3" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- about me section -->
+  <div class="aboutMe animation-element">
+    <div class="container">
+      <h1>About Me</h1>
+    <div class="row">
+      <div class="col-lg-4">
+        <h2>My Occupation</h2>
+        <p>I am a full time student studying Computer Systems Engineering at the University of Auckland. In this degree, we study about how electronic circuits function and how to program computers at the level close to the hardware.</p>
+      </div>
+      <div class="col-lg-4">
+        <h2>My Passion</h2>
+        <p>
+          I have a passion for technology, problem solving and design, which lead me to take Computer Systems at university and is why I learn web development in my spare time.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        <h2>My Practices</h2>
+        <p>
+          When I design something, it must be something I can be proud of. I believe that even the little details shouldn't be ignored. When this comes to web development, I ensure my websites are responsive and attractive with fast loading times to give the best user experience. When it comes to programming in general, I ensure my code is readable, reusable and DRY.
+        </p>
+      </div>
+    </div>
+    </div>
+    
+  </div>
+  <!-- Blog Links Section -->
+  <div class="blogs animation-element">
+    <div class="container">
+      <h1>My Blogs</h1>
+      <p style="text-align:center;">I currently have no blog pages yet</p>
+    </div>
+  </div>
+  <!-- Contact Me -->
+  <div class="contact animation-element">
+    <h1>Contact Me</h1>
+    <p>Mobile: 021 1711 211</p>
+    <p>Email: albasychris@gmail.com</p>
+  </div>
+
+  <!-- bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- javascript file -->
+  <script src="blog/js/script.js"></script>
+</body>
 </html>

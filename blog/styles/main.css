@@ -1,4 +1,108 @@
+/* Styles for Homepage*/
+/* general styles */
 body{
-font-weight:200;
-font-family:arial;
+    margin:0px
 }
+h1{
+    font-size:3rem !important;
+    text-align:center;
+    color:#d68945;
+    font-weight:200 !important;
+    padding:100px;
+    padding-top:200px;
+}
+h2{
+    color:#cc612f;
+}
+.in-view{
+    background:#A9775E;
+    transition:500ms;
+}
+/* general styles ends */
+/* landing area starts */
+header{
+
+    background:url("images/ocean_hideout_1.png");
+    background-size: cover;
+    text-align:center;
+    height:100vh;
+    color:white;
+    
+}
+header h1{
+    color:white;
+    padding:0px;
+    
+}
+.title{
+    padding-top:40vh;
+
+}
+.titleButton img{
+    width:100px;
+}
+.titleButton{
+    position:absolute;
+    bottom:0px;
+    right:100px;
+    width:120px;
+    height:120px;
+    background:rgba(255, 255, 255, 0.507);
+}
+.titleButton:hover{
+    background:white;
+}
+@media (max-width:600px){
+    .titleButton{
+        width:100%;
+        right:0px;
+        height:100px;
+    }
+}
+hr{
+    width:50%;
+    border-top:1px solid white !important;
+}
+/* landing area ends */
+/* navbar starts */
+.navbar-dark .navbar-nav .nav-link{
+    color:white !important;
+}
+.navbar{
+    padding:0px !important;
+    position: sticky !important;
+    top:0px;
+    z-index:1;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+    background:	#A9775E;
+
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-left:40px !important;
+    padding-right:40px !important;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+/* navbar ends */
+/* about me begins */
+.aboutMe{
+    min-height:101vh;
+}
+/* about me ends */
+/* blog begins */
+.blogs{
+    min-height:101vh;
+    background:#dbdbdb;
+}
+/* blog ends */
+/* contact me begins */
+.contact{
+    min-height:90vh
+}
+.contact p{
+    font-size:1.5rem;
+    font-weight:200;
+    text-align:center;
+}
+/* contact me ends */
