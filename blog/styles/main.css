@@ -8,8 +8,8 @@ h1{
     text-align:center;
     color:#d68945;
     font-weight:200 !important;
-    padding:100px;
-    padding-top:200px;
+    padding:10%;
+    padding-top:20%;
 }
 h2{
     color:#cc612f;
@@ -98,6 +98,20 @@ hr{
     min-height:101vh;
     background:#dbdbdb;
 }
+.blogLink{
+    background:white;
+    padding:50px;
+}
+.blogs a{
+    margin:30px;
+}
+.blogs .col{
+    padding-right:50px !important;
+    padding-left:50px !important;
+}
+.blogs h2{
+    text-align:center;
+}
 /* blog ends */
 /* contact me begins */
 .contact{
@@ -109,3 +123,49 @@ hr{
     text-align:center;
 }
 /* contact me ends */
+/* Styles for homepage ends */
+
+/* ***************************************************************************************************************************************************************************************************************************************************************************************************************** */
+
+/* Blog Styles Begins */
+.blogHeader{
+    padding-top:100px;
+    padding-bottom:100px;
+    background:#1b1f82;
+    height:100vh;
+    text-align:center;
+}
+.blogHeader h1{
+    color:white;
+    padding-bottom:0px;
+}
+
+.blogScrollDown{
+    position:absolute;
+    bottom:0px;
+    right:100px;
+    width:120px;
+    height:120px;
+    background:rgba(255, 255, 255, 0.507);
+}
+.blogScrollDown img{
+    position:relative;
+}
+.blogScrollDown:hover{
+    background:white;
+}
+.blogScrollDown img{
+    width:100px;
+}
+@media (max-width:600px){
+    .blogScrollDown{
+        width:100%;
+        right:0px;
+        height:100px;
+    }
+}
+.returnHome{
+    border-radius:0 !important;
+    position:sticky;
+    top:0px;
+}

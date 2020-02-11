@@ -2,31 +2,49 @@ $(".titleButton").click(function(){
     $([document.documentElement, document.body]).animate({
         scrollTop: $(".navbar").offset().top
     }, 2000);
-})
+});
+$(".blogScrollDown").click(function(){
+    
+    
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".returnHome").offset().top
+    }, 2000);
+});
+
 
 $(".navbar-brand").click(function(){
     $([document.documentElement, document.body]).animate({
         scrollTop: $(".homepage").offset().top
     }, 2000);
-})
+});
 
 $(".1").click(function(){
     $([document.documentElement, document.body]).animate({
         scrollTop: $(".aboutMe").offset().top
     }, 2000);
-})
+});
 $(".2").click(function(){
     $([document.documentElement, document.body]).animate({
         scrollTop: $(".blogs").offset().top
     }, 2000);
-})
+});
 $(".3").click(function(){
     $([document.documentElement, document.body]).animate({
         scrollTop: $(".contact").offset().top
     }, 2000);
-})
+});
 
 // animate scroll down button in landing area
+$(".blogScrollDown").hover(function(){
+
+    $(".blogScrollDown img").animate({bottom:"-=15px"},500,"linear");
+    $(".blogScrollDown img").animate({bottom:"+=15px"},500,"linear");
+   
+    
+},function(){
+
+});
+// animate scroll down button in blogs
 $(".titleButton").hover(function(){
 
     $(".titleButton img").animate({bottom:"-=15px"},500,"linear");
