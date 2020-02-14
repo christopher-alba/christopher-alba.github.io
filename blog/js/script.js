@@ -62,13 +62,13 @@ for(let i = 0; i < 5;i++){
   
 
     if($('.learnMoreContent' + i).is(":visible")){
-      console.log("testing 1");
+      
       
       $('.blogLearnMore' + i + ' p').text("Learn More");
       $('.learnMoreContent' + i).slideToggle();
     }
     else{
-      console.log("testing 2");
+     
       $('.blogLearnMore' + i + ' p').text("Hide");
       $('.learnMoreContent'+ i).slideToggle();
     }
