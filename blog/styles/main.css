@@ -115,6 +115,7 @@ hr{
 .blogs h3{
     font-family: 'Raleway', sans-serif;
 }
+
 .blogs:before{
     background: inherit;
     top: 0;
@@ -150,14 +151,41 @@ hr{
     transform-origin: 100%;
     z-index: -1;
   }
-.blogLink{
+  .blogOuter{
+    display:flex;
+    border-radius:1rem;
     background:white;
+    margin-bottom:20px;
+}
+.blogLink{
+    
     transition:500ms;
     padding:15px;
-    color:#c7550e;
-    text-align:center;
-    border-radius:1rem;
     
+    color:#c7550e;
+      
+}
+.blogLink h3{
+    text-align:center;
+}
+
+.blogLearnMore{
+    width:20%;
+    background:black;
+    color:white;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align:center;
+    padding-top:4%;
+    transition:500ms;
+}
+.blogLearnMore:hover{
+    background:orange;
+    cursor:pointer;
+    transition:500ms;
+}
+.learnMoreContent{
+    display:none;
 }
 .blogButtons{
     width:60%;
@@ -169,16 +197,20 @@ hr{
         width:90%;
     }
 }
-.blogLink:hover{
-   
-    transition:500ms;
-    color:#fcb851 !important;
-}
+
 .blogs a:hover{
     text-decoration:none !important;
+    
+}
+.blogs .blogLink:hover{
+    transition:500ms;
+    
+    color:#fcb851 !important;
+
 }
 .blogs a{
-    margin:30px;
+    
+    width:80%;
 }
 .blogs .col{
     padding-right:50px !important;

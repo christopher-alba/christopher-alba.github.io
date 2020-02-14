@@ -54,6 +54,30 @@ $(".titleButton").hover(function(){
 },function(){
 
 });
+
+// index page learn more buttons and content toggle
+
+for(let i = 0; i < 5;i++){
+  $('.blogLearnMore'+ i).click(function(){
+  
+
+    if($('.learnMoreContent' + i).is(":visible")){
+      console.log("testing 1");
+      
+      $('.blogLearnMore' + i + ' p').text("Learn More");
+      $('.learnMoreContent' + i).slideToggle();
+    }
+    else{
+      console.log("testing 2");
+      $('.blogLearnMore' + i + ' p').text("Hide");
+      $('.learnMoreContent'+ i).slideToggle();
+    }
+    
+  })
+}
+
+
+
 // Detect which section is displayed in the screen
 var $window = $(window);
 var $animation_elements = $('.animation-element');
