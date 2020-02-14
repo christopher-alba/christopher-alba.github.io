@@ -10,9 +10,21 @@ h1{
     font-weight:200 !important;
     padding:8%;
     padding-top:15%;
+    font-family: 'Sriracha', cursive;
 }
 h2{
     color:#cc612f;
+    font-family: 'Sriracha', cursive;
+}
+h3{
+    font-family: 'Sriracha', cursive;
+}
+
+h4{
+    font-family: 'Raleway', sans-serif;
+}
+p{
+    font-family: 'Raleway', sans-serif;
 }
 .in-view{
     background:#A9775E;
@@ -100,6 +112,9 @@ hr{
 }
 /* about me ends */
 /* blog begins */
+.blogs h3{
+    font-family: 'Raleway', sans-serif;
+}
 .blogs:before{
     background: inherit;
     top: 0;
