@@ -1,7 +1,17 @@
 $(".titleButton").click(function(){
+  
+  if($(".topnav").is(":visible")){
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(".topnav").offset().top
-    }, 2000);
+      scrollTop: $(".topnav").offset().top
+  }, 2000);
+  }
+  else{
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $(".verticalNav").offset().top
+  }, 2000);
+    
+  }
+   
 });
 $(".blogScrollDown").click(function(){
     
@@ -135,3 +145,53 @@ function check_if_in_view() {
 
 $window.on('scroll resize', check_if_in_view);
 $window.trigger('scroll');
+
+
+//Sticky vertical navbar code below
+if($('.verticalNav').is(":visible")){
+
+    // Get the header
+  var header = document.getElementsByClassName("verticalNav")[0];
+
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+  console.log(sticky);
+
+  $window.on('scroll resize', function() {
+    newScrollPosition();
+    myFunction();
+  });
+
+  function newScrollPosition(){
+    sticky = dw_getWindowDims();
+  }
+
+  // Get viewport size
+  function dw_getWindowDims() {
+      var doc = document, w = window;
+      var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+              doc.documentElement: doc.body;
+      
+      var width = docEl.clientWidth;
+      var height = docEl.clientHeight;
+      
+      // mobile zoomed in?
+      if ( w.innerWidth && width > w.innerWidth ) {
+          width = w.innerWidth;
+          height = w.innerHeight;
+      }
+      
+      return height;
+  }
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("stickyNav");
+    } else {
+      header.classList.remove("stickyNav");
+    }
+  }
+
+
+}
+
