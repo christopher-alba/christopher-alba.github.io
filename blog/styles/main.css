@@ -128,6 +128,7 @@ hr{
     }
     .nav-link{
         float:left;
+        width:auto;
     }
     .verticalNav{
         display:none;
@@ -145,8 +146,8 @@ hr{
     justify-content: start !important;
 }
 .nav-link{
-    padding-left: 20px !important;
-    padding-right:20px !important;
+    padding-left: 30px !important;
+    padding-right:30px !important;
     padding-top:30px !important;
     padding-bottom:30px !important;
 }
