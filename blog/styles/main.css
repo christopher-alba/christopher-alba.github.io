@@ -206,6 +206,7 @@ hr{
     transition:500ms;
     
     color:#fcb851 !important;
+    text-decoration:underline;
 
 }
 .blogs a{
@@ -228,6 +229,23 @@ hr{
     font-size:1.5rem;
     font-weight:200;
     text-align:center;
+}
+.socialIcons{
+    text-align:center;
+    font-size:3rem;
+
+}
+.icon{
+    display:inline-block;
+    padding:30px;
+}
+.icon a{
+    color:black;
+}
+.icon a:hover{
+
+    color:#fcb851 ;
+
 }
 /* contact me ends */
 /* Styles for homepage ends */
