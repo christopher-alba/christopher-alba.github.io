@@ -1,6 +1,6 @@
 $(".titleButton").click(function(){
     $([document.documentElement, document.body]).animate({
-        scrollTop: $(".navbar").offset().top
+        scrollTop: $(".topnav").offset().top
     }, 2000);
 });
 $(".blogScrollDown").click(function(){

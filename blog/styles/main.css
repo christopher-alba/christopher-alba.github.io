@@ -79,30 +79,60 @@ hr{
     border-top:1px solid white !important;
 }
 /* landing area ends */
+
+
 /* navbar starts */
-.navbar-dark .navbar-nav .nav-link{
+
+.nav-link{
     color:white !important;
     transition:500ms;
+    float:left;
 }
-.navbar{
+.topnav{
+    background:rgb(39, 39, 39);
     padding:0px !important;
     position: sticky !important;
     top:0px;
     z-index:2;
+    height:84px;
 }
-.navbar-dark .navbar-nav .nav-link:hover{
+@media(max-width:800px){
+    .navbar-brand{
+        display:none !important;
+    }
+    .navLinks{
+        float:left !important;
+        
+      
+    }
+}
+.nav-link:hover{
     background:	#A9775E;
     transition:500ms;
 
 }
-.navbar-expand-lg .navbar-nav .nav-link{
-    padding-left:40px !important;
-    padding-right:40px !important;
-    padding-top:30px;
-    padding-bottom:30px;
+.navLinks{
+    float:right;
+}
+.navbar .container{
+    justify-content: start !important;
+}
+.nav-link{
+    padding-left: 30px !important;
+    padding-right:30px !important;
+    padding-top:30px !important;
+    padding-bottom:30px !important;
 }
 .navbar-brand{
-    padding:25px !important;
+    padding:27px !important;
+    font-family: 'Arvo', serif;
+    color:white;
+    
+}
+a.navbar-brand:hover{
+    
+    color:white;
+    background:rgb(71, 71, 71);
 }
 /* navbar ends */
 /* about me begins */
@@ -192,7 +222,7 @@ hr{
     margin:0 auto 0 auto;
 }
 
-@media(max-width:600px){
+@media(max-width:800px){
     .blogButtons{
         width:90%;
     }
