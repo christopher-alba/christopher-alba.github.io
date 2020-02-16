@@ -124,6 +124,10 @@ hr{
     .navLinks{
         float:left !important;
     }
+    
+}
+@media(max-width:1000px){
+    
     .topnav{
         display:block;
     }
