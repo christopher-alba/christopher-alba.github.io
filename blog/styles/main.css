@@ -6,7 +6,7 @@ body{
 h1{
     font-size:3rem !important;
     text-align:center;
-    color:#d68945;
+    color:#ff7700;
     font-weight:200 !important;
     padding:8%;
     padding-top:15%;
@@ -26,10 +26,7 @@ h4{
 p{
     font-family: 'Raleway', sans-serif;
 }
-.in-view{
-    background:#A9775E;
-    transition:500ms;
-}
+
 /* general styles ends */
 /* landing area starts */
 header{
@@ -80,6 +77,10 @@ hr{
 }
 /* landing area ends */
 /* vertical nav starts */
+.in-view{
+    background:rgb(255, 87, 3);
+    transition:500ms;
+}
 .verticalNav{
     background: rgb(39, 39, 39);
     width:120px;
@@ -135,7 +136,7 @@ hr{
     }
 }
 .nav-link:hover{
-    background:	#A9775E;
+    background:	rgb(255, 86, 1);
     transition:500ms;
 
 }
