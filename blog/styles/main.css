@@ -7,10 +7,10 @@ h1{
     font-size:3rem !important;
     text-align:center;
     color:#ff7700;
-    font-weight:200 !important;
+    font-weight:400 !important;
     padding:8%;
     padding-top:15%;
-    font-family: 'Sriracha', cursive;
+    
 }
 h2{
     color:#cc612f;
@@ -286,15 +286,20 @@ a.navbar-brand:hover{
 }
 /* blog ends */
 /* contact me begins */
+
 .contact{
     min-height:90vh
 }
-.contact p{
+body .contact{
+    text-align:center;
+}
+.contact p, .contact .emailLink{
     font-size:1.5rem;
     font-weight:200;
     text-align:center;
+    color:black;
 }
-.socialIcons{
+.socialIcons a{
     text-align:center;
     font-size:3rem;
 
