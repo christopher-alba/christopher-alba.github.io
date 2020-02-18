@@ -67,7 +67,7 @@ $(".titleButton").hover(function(){
 
 // index page learn more buttons and content toggle
 
-for(let i = 0; i < 5;i++){
+for(let i = 0; i < 7;i++){
   $('.blogLearnMore'+ i).click(function(){
   
 
