@@ -14,18 +14,16 @@ h1{
 }
 h2{
     color:#cc612f;
-    font-family: 'Sriracha', cursive;
-}
-h3{
-    font-family: 'Sriracha', cursive;
+  
 }
 
 h4{
     font-family: 'Raleway', sans-serif;
 }
-p{
+p , a{
     font-family: 'Raleway', sans-serif;
 }
+
 
 /* general styles ends */
 /* landing area starts */
@@ -299,6 +297,12 @@ body .contact{
     text-align:center;
     color:black;
 }
+.contact .emailLink p{
+    background:lightsalmon;
+}
+.contact .emailLink p:hover{
+    background:rgb(248, 132, 87);
+}
 .socialIcons a{
     text-align:center;
     font-size:3rem;
@@ -310,6 +314,7 @@ body .contact{
 }
 .icon a{
     color:black;
+    
 }
 .icon a:hover{
 
