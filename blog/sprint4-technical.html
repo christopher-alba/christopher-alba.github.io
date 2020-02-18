@@ -22,12 +22,153 @@
         <h1>Technical Blog 4</h1>
         <div class="blogContent">
             <h2>When I Was Stuck on a Simple Problem</h2>
+            <p>The vertical navbar in my blog's homepage has a feature where it sticks to the top of the viewport when past a certain scroll position. Then, when it reaches its original position (specifically 100% of the viewport's height from the top of the website) it detatches from the top of the screen and becomes a static element. The implementation of this feature was initially simple because all that was needed was to calculate the initial position of the navbar, then write some logic so that if the scroll position is greater than the initial position it would stick to the top of the viewport and then become static when less than the initial position. However, there were some complications that arose when the viewport was resized because the initial position that was calculated would no longer be equal to 100% of the viewport's height. This caused the navbar to stick to the viewport at the wrong times, making it appear glitchy. I became stuck on how to solve this issue because I did not realize the code I wrote did not recalculate for the correct initial position after a viewport height change. I spent around 30 minutes trying to debug my code but could not find what was wrong. When I was debugging I used console.log statements to see the calculated height of the initial position. Throughout this time I began to feel confused because I was unsure what was happening within the code. Eventually, I realized what was wrong and used google to find a function that calculated the dimensions of the viewport. I then set this function to be called every time the window/viewport changed in size to recalculate the navbar's initial position. What I learned from this experience was to be more mindful of what was happening with my code. The reason I did not realize the underlying problem to my glitchy navbar was because I was unsure of what my code was exactly doing. </p>
+            <h3>Underlying Javascript Code (contains some jQuery)</h3>
+            <pre class="sprint4-technical-code"><code>
+    var $window = $(window);
+
+    //Sticky vertical navbar code below
+    if($('.verticalNav').is(":visible")){
+    
+        // Get the header
+        var header = document.getElementsByClassName("verticalNav")[0];
+    
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+        console.log(sticky);
+    
+        $window.on('scroll resize', function() {
+        newScrollPosition();
+        myFunction();
+        });
+    
+        function newScrollPosition(){
+        sticky = dw_getWindowDims();
+        }
+    
+        // Get viewport size
+        function dw_getWindowDims() {
+            var doc = document, w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
+                    doc.documentElement: doc.body;
+            
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+            
+            // mobile zoomed in?
+            if ( w.innerWidth && width > w.innerWidth ) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+            
+            return height;
+        }
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("stickyNav");
+            } else {
+                header.classList.remove("stickyNav");
+            }
+        }
+    
+    
+    }
+                
+
+
+            </code></pre>
         </div>
         <div class="blogContent">
+
             <h2>When I Solved a Problem Elegantly</h2>
+            <p>In my blog's homepage, there is a list of all my blog posts each with a learn more button that displayed some text. The not so elegant way of writing the functionality code for those buttons isto write a separate block of code for each button to display their corresponding block of text. This would lead to very long and repetitive code. Instead of doing this, I decided to use a loop with only one block of code to cycle through each individual button and their corresponding block of text and apply the slide toggle functionality. This lead to my code to be more clean and less repetitive, aswell as easy to maintain. All I need to do when adding another blog is to increase the number of cycles by one and it would add functionality to the new button. The problem solving techniques I used were google and pseudocode. I searched google how to change the text element using a javascript function and I used pseudocode to mentally plan what structure my block of code would have. Throughout solving this problem I felt very positive because I knew that I was solving the problem efficiently.</p>
+            <h3>Underlying Javascript Code (uses jQuery)</h3>
+            <pre class="sprint4-technical-code"><code >
+    // index page learn more buttons and content toggle
+
+    for(let i = 0; i < 7; i++){
+    $('.blogLearnMore'+ i).click(function(){
+    
+
+        if($('.learnMoreContent' + i).is(":visible")){
+        
+        
+            $('.blogLearnMore' + i + ' p').text("Learn More");
+            $('.learnMoreContent' + i).slideToggle();
+        }
+        else{
+        
+            $('.blogLearnMore' + i + ' p').text("Hide");
+            $('.learnMoreContent'+ i).slideToggle();
+        }
+        
+    })
+    }
+
+            </code></pre>
+
+            <h3>Underlying HTML Code</h3>
+            <pre class="sprint4-technical-code"><xmp>
+
+    <div class="blogOuter">
+        <a href="blog/sprint1-cultural.html">
+            <div class="blogLink">
+                <h3>Sprint 1 Cultural <i class="fas fa-external-link-alt"></i></h3>
+
+                <div class="learnMoreContent0 learnMoreContent">
+                    <p>This blog is about some of my core personal values. It explains to how my culture has influenced my values and identity. It also describes my strengths and limitations in terms of my learning and career. </p>
+                </div>
+            </div>
+        </a>
+        
+        <div class="blogLearnMore0 blogLearnMore">
+            <p>Learn More</p>
+        </div>
+    </div>
+    <div class="blogOuter">
+        <a href="blog/sprint2-technical.html">
+            <div class="blogLink">
+                <h3>Sprint 2 Technical <i class="fas fa-external-link-alt"></i></h3>
+
+                <div class="learnMoreContent1 learnMoreContent">
+                    <p>This blog is about CSS display inline, display block, and display inline-block. It contains some visual examples and the underlying CSS code used.</p>
+                </div>
+            </div>
+        </a>
+    
+        <div class="blogLearnMore1 blogLearnMore">
+            <p>Learn More</p>
+        </div>
+    </div>
+        
+                
+
+            </xmp></pre>
+            
+            
         </div>
         <div class="blogContent">
             <h2>Problem Solving Techniques and Processes</h2>
+
+            <h3>Pseudocode</h3>
+            <p>Pseudocode is writing your code in english words instead of code syntax. It makes planning out the structure of your code faster and easier to see how your code will function. I am confident in my ability to use pseudocode to help organize the layout of my code as I use it often mentally. I use it when I break down a problem into smaller sections and write one line of pseudocode for each problem I have to solve. If a section is complicated, I then write out more pseudocode to help visualize the control flow and logic my code will have.</p>
+            <h3>Trying Something</h3> 
+            <p>Honestly, when I'm trying to solve a problem I just try every idea that comes into mind. The worst that will happen is that it won't work and all I have to do is remove the code. However, I first try solutions that are most efficient first, and work my way down if they don't work. I try and stay systematic in my approach to solving problems to be as clean and efficient as possible. Sometimes, what I come up with will not be the most efficient, so I just refactor my code when I see that there can be some improvement.</p>
+            <h3>Rubber Ducky Method</h3>
+            <p>Rubber ducky debugging is when you explain what each line of code is doing. This means defining any values for variables and any outputs or inputs. This method is extremely useful when debugging because it will allow you to see how exactly your code is working. I use this method when there is a bug in my code and I am unsure of where it is initially. This is what I consider to be one of the most useful debugging methods because of the systematic approach to debugging.</p>
+            <h3>Reading Error Messages</h3>
+            <p>Error messages are important to read because they often occur when there is a critical error in your code. I always read my error messages and if I dont know what they mean I search them up on google. However, the error message alone may not be enough for you to know where the bug in your code is in some cases. It is generally useful as a starting point to what might be wrong in your code, and then use other problem solving techniques to find the error.</p>
+            <h3>Console.logging</h3>
+            <p>Console logging is when you use the console.log() method to write out text on the command promp, which could just be some words or be values of variables such as objects to help you find out what's wrong in your code. This method is extremely useful to use together with the rubber ducky method as it will make it easier to know what each line of your code is doing. I love using console.log because it saves me so much brain power from thinking about the values of variables and is often better than making educated guesses on what the values are because it outputs the exact values.</p>
+            <h3>Googling</h3>
+            <p>Google is an amazing tool to use when you want to find an already existing solution to a problem. I use it everytime I am stuck and can't think of a solution by myself. The difficulty with using google is knowing what queries to make and being able to describe your problem in a few words. The more I use google, the more I improve in identifying and describing my problems.</p>
+            <h3>Ask Your Peers</h3>
+            <p> I have rarely asked my peers for assistance, both in university and the coding bootcamp. However, I can see how this can be very useful because they can help guide you to a functional solution. My peers may know things that I don't know. I generally am very open to advice and tips from my peers when they give it to me, and am more than happy to help them too. </p>
+            <h3>Ask Your Coaches</h3>
+            <p>When I am completely stuck and have put a great effort into trying to solve a problem, I go to ask my coaches or lecturers. They will often give me a new direction to solving the problem and highlight ideas that I did not realize before. I am not afraid to ask them for help, but I try my best not to rely on them heavily because it is important to be able to work independently.</p>
+            <h3>Improving Your Process with Reflection</h3>
+            <p>For me, reflecting on my experiences is the most challenging part of the dev-academy bootcamp. This is because I rarely reflected on myself in the past. However, I can see the benefites this method will have on me because it will allow me to realize my faults and areas that I can improve in. I know that the more I do it, the better I will become.</p>
         </div>
     </div>
     

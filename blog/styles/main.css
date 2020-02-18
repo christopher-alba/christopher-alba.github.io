@@ -412,7 +412,7 @@ body .contact{
     background:rgba(128, 128, 128, 0.493);
 }
 
-.sprint2-technical-code{
+.sprint2-technical-code, .sprint4-technical-code {
     color:rgb(255, 143, 161);
     background:rgb(240, 240, 240);
 }
