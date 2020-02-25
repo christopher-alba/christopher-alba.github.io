@@ -389,8 +389,6 @@ body .contact{
 /* Sprint 2 technical styles begins */
 .inline1{
     display:inline;
-    width:1000px;
-    height:1000px;
     padding:50px;
     margin:20px;
     background:rgba(128, 128, 128, 0.493);
